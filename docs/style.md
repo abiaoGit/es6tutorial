@@ -281,7 +281,7 @@ const boundMethod = function(...params) {
 const boundMethod = method.bind(this);
 
 // best
-const boundMethod = (...params) => method.apply(this, params);
+const boundMethod = (...params) => method(this, params);
 ```
 
 简单的、单行的、不会复用的函数，建议采用箭头函数。如果函数体较为复杂，行数较多，还是应该采用传统的函数写法。
